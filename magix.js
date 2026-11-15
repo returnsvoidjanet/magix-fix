@@ -509,7 +509,7 @@ var civ2 = function () {
 }
 
 G.NewGame = function (doneLoading, mods) {
-    if (G.resets == 0) G.loadmenu = 1;
+    if (G.resets == 0) G.loadMenu = 1;
     document.title = 'Setup: NeverEnding Legacy';
     //clean up data, create a map and ask the player to pick a starting location
     if (!doneLoading) {

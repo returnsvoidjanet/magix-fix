@@ -6099,6 +6099,8 @@ G.AddData({
         G.NewGameWithSameMods2 = function () //this one does not change loadmenu
         {
             if (!G.currentMap) {
+                // No run has started yet (fresh game), so there is no map to keep: go straight to the Human start screen, which creates one.
+                if (G.loadMenu == 1 && G.modsByName['Default dataset'] && window.civ1) { civ1(); return }
                 alert("It appears that Magix has not fully loaded. Reload and reimport mods to fix the issue!")
                 return
             }
