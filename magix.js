@@ -2489,7 +2489,7 @@ if (getObj("civ") != "1") {
                             G.update['policy']();
                         }
                     } else if (!eatOnGatherVisible && G.has('rules of food')) {
-                        G.getPolicy('eat on gather').visible = true;
+                        G.gainPolicy(G.getPolicy('eat on gather'));
                     }
                     if (G.day % 15 == 0 && G.checkPolicy('far foraging') == 'on' && G.getRes('land').amount < 80) changeHappiness(-0.03 * G.getUnitAmount('gatherer'), 'far foraging');
                     if (G.day % 30 == 0 && G.tab.id == "land") G.updateMapDisplay();
@@ -22933,7 +22933,7 @@ if (getObj("civ") != "1") {
                             G.update['policy']();
                         }
                     } else if (!eatOnGatherVisible && G.has('rules of food')) {
-                        G.getPolicy('eat on gather').visible = true;
+                        G.gainPolicy(G.getPolicy('eat on gather'));
                     }
                     if (G.getUnitAmount('archaeologist') > 0) G.getDict('out of relics').req = { 'archaeology': true, 'tribalism': true };
                     else G.getDict('out of relics').req = { 'archaeology': true, 'tribalism': false };//it would be stupid losing all relics with no archaeologists
